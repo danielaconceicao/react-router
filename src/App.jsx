@@ -1,26 +1,110 @@
 import { useEffect, useState } from 'react'
 import Header from './components/Header'
+import Footer from './components/Footer'
 import './App.css'
 
 function App() {
   const [postData, setPostData] = useState([])
 
-  function fetchPost(url = 'http://localhost:3001/posts'){
+  function fetchPost(url = 'http://localhost:3001/posts') {
     fetch(url)
-    .then(resp => resp.json())
-    .then(data => {
-      console.log(data)
-      setPostData(data.data)
-    })
+      .then(resp => resp.json())
+      .then(data => {
+        console.log(data)
+        setPostData(data.data)
+      })
   }
 
-  useEffect(() => {fetchPost()}, [])
+  useEffect(() => { fetchPost() }, [])
 
   return (
     <>
-    <div className='container'>
-      <Header/>
-      <div className='row row-cols-1 row-cols-md-2 row-cols-lg-3'>
+      <Header />
+      <div className='container'>
+
+        <form /* onSubmit={handleSubmit} */ className='py-5'>
+          <div className="mb-3">
+            <label htmlFor="image" className="form-label">Image</label>
+            <input
+              type="text"
+              className="form-control"
+              name="image"
+              id="image"
+              aria-describedby="imagehelper"
+              placeholder="/images/1.jpg"
+              /* value={formData.image}
+              onChange={handleChange} */
+            />
+            <small id="imagehelper" className="form-text text-muted"></small>
+          </div>
+
+          <div className="mb-3">
+            <label htmlFor="title" className="form-label">Title</label>
+            <input
+              type="text"
+              className="form-control"
+              name="title"
+              id="title"
+              aria-describedby="titlehelper"
+              placeholder="Title blog"
+              /* value={formData.title}
+              onChange={handleChange} */
+            />
+            <small id="titlehelper" className="form-text text-muted"></small>
+          </div>
+
+          <div className="mb-3">
+            <label htmlFor="content" className="form-label">Content</label>
+            <textarea
+              className="form-control"
+              id="Content"
+              rows="3"
+              name='content'
+              /* value={formData.content}
+              onChange={handleChange} */
+            />
+          </div>
+
+
+          <div className="mb-3">
+            <label htmlFor="tags" className="form-label">Tags</label>
+            <input
+              type="text"
+              className="form-control"
+              name="tags"
+              id="tags"
+              aria-describedby="tagshelper"
+              placeholder="Antipasti, Ricette vegetariane, Ricette al forno"
+             /*  value={formData.tags}
+              onChange={handleChange} */
+            />
+            <small id="tagshelper" className="form-text text-muted"></small>
+          </div>
+
+          <div className="form-check mb-3">
+            <input
+              id="published"
+              name='published'
+              type="checkbox"
+              className="form-check-input"
+              /* value={formData.published}
+              onChange={handleChange} */
+
+            />
+            <label className="form-check-label" htmlFor=""> Published </label>
+          </div>
+
+
+          <button
+            type="submit"
+            className="btn btn-secondary"
+          >
+            {/*  {formData.id ? 'Update Post' : 'Create Post'} */}
+            Submit
+          </button>
+        </form>
+
+        <div className='row row-cols-1 row-cols-md-2 row-cols-lg-3'>
           {postData.map(post => (
             <div className='col py-3' key={post.id}>
               <div className='card'>
@@ -37,9 +121,10 @@ function App() {
                 </div>
               </div>
             </div>
-      ))}
+          ))}
+        </div>
       </div>
-    </div>
+      <Footer/>
     </>
   )
 }

@@ -3,3 +3,30 @@ img{
   height: 256px;
 }
 
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #242424;
+  color: white;
+  padding: 1rem .8rem;
+  nav {
+      a {
+        text-decoration: none;
+        color: white;
+        padding: .5rem;
+  
+        &.active {
+          text-decoration: underline;
+          color: blue;
+        }
+      }
+    }
+}
+
+footer{
+  background-color: #242424;
+  padding: 1rem 0;
+  text-align: center;
+  color: white;
+}
