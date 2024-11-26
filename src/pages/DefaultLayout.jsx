@@ -1,11 +1,10 @@
 import { Outlet } from 'react-router-dom'
-import HeaderMenu from '../components/HeaderMenu'
+import AppHeader from '../components/AppHeader'
 export default function DefaultLayout(){
     return(
         <>
             <header>
-                <h2>Logo</h2>
-                <HeaderMenu/>
+                <AppHeader/>
             </header>
             <main>
                 <Outlet/>

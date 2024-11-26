@@ -3,6 +3,7 @@ import DefaultLayout from './pages/DefaultLayout'
 import Home from './pages/Home'
 import Ricette from './pages/Ricette'
 import AboutUs from './pages/AboutUs'
+import Post from './pages/Post'
 
 import './App.css'
 
@@ -14,6 +15,7 @@ function App() {
           <Route element={<DefaultLayout />}>
             <Route path='/' element={<Home />}/>
             <Route path='/ricette' element={<Ricette />}/>
+            <Route path='/post/:id'element={<Post/>} />
             <Route path='/aboutUs' element={<AboutUs />}/>
           </Route>
         </Routes>

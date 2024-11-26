@@ -9,16 +9,24 @@ header{
   align-items: center;
   background-color: #242424;
   color: white;
-  padding: 1rem .8rem;
+  padding: 1rem 1.5rem;
+  .logo{
+    display: flex;
+    align-items: center;
+    img{
+      width: 95px;
+      margin-right: 1.5rem;
+    }
+  }
   nav {
       a {
         text-decoration: none;
         color: white;
-        padding: .5rem;
+        padding: .75rem 1.25rem;
   
         &.active {
-          text-decoration: underline;
-          color: blue;
+          font-weight: bolder;
+          border-bottom: 4px solid cyan;
         }
       }
     }
@@ -27,6 +35,7 @@ header{
 main{
   min-height: calc(100vh - 80px);
 }
+
 
 footer{
   background-color: #242424;
