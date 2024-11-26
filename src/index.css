@@ -24,6 +24,10 @@ header{
     }
 }
 
+main{
+  min-height: calc(100vh - 80px);
+}
+
 footer{
   background-color: #242424;
   padding: 1rem 0;

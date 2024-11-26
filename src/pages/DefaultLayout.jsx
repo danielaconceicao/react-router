@@ -13,8 +13,6 @@ export default function DefaultLayout(){
             <footer>
                 <p>copyright 2024</p>
             </footer>
-        
-        
         </>
     )
 }
