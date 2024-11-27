@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Posts(){
 
@@ -112,6 +113,7 @@ export default function Posts(){
                                     <p className="card-text">Tags: {post.tags.join(', ')}</p>
                                     <p className='card-text'>Published: {post.published ? 'Publishable' : 'Unpublishable'}</p>
                                     <div>
+                                        <Link to={`/posts/${post.id}`} className='btn btn-primary mx-2'>  <i className="bi bi-eye"> View</i></Link>
                                         <button /* onClick={() => handleEdit(post)} */ type='button' className='btn btn-primary mx-2'><i className="bi bi-pencil">edit</i></button>
                                         <button /* onClick={() => handleDelete(post.slug)} */ type='button' className='btn btn-primary'><i className="bi bi-trash3">Delete</i></button>
                                     </div>

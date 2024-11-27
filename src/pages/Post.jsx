@@ -22,7 +22,6 @@ export default function Post() {
                     }else{
                         setPost(data.data)
                     }
-                   
                 })
                 .catch(err => {
                     console.log(err)
