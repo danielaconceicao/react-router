@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-export default function Ricette(){
+export default function Posts(){
 
     const [postData, setPostData] = useState([])
 

@@ -5,7 +5,7 @@ export default function HeaderMenu() {
         <>
             <nav>
                 <NavLink to="/">Home</NavLink>
-                <NavLink to="/ricette">Ricette</NavLink>
+                <NavLink to="/posts">Ricette</NavLink>
                 <NavLink to="/aboutUs">AboutUs</NavLink>
             </nav>
         </>

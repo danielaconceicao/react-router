@@ -36,6 +36,11 @@ main{
   min-height: calc(100vh - 80px);
 }
 
+.img-max-width {
+  max-width: 500px;
+  width: 100%;
+  /* Isso garante que a imagem se ajuste ao tamanho do contêiner */
+}
 
 footer{
   background-color: #242424;
