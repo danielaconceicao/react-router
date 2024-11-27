@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Posts from './pages/Posts'
 import AboutUs from './pages/AboutUs'
 import Post from './pages/Post'
+import NotFound from './pages/NotFound'
 
 import './App.css'
 
@@ -17,6 +18,7 @@ function App() {
             <Route path='/posts' element={<Posts />}/>
             <Route path='/posts/:id'element={<Post/>} />
             <Route path='/aboutUs' element={<AboutUs />}/>
+            <Route path='*' element={<NotFound />}/>
           </Route>
         </Routes>
       </BrowserRouter>
